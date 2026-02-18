@@ -94,6 +94,22 @@
     .placeholder-icon { font-size: 64px; margin-bottom: 15px; }
     .image-placeholder p { color: #666; font-size: 16px; }
     .image-caption { text-align: center; color: #555; font-size: 14px; margin-top: 20px; font-style: italic; }
+    
+    /* Options */
+    .section-intro { font-size: 18px; color: #888; text-align: center; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto; }
+    .options-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .option-card { background: rgba(255,255,255,0.05); padding: 30px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); }
+    .option-card.featured { border-color: #c41e3a; }
+    .option-name { font-size: 22px; font-weight: bold; margin-bottom: 5px; }
+    .option-price { font-size: 18px; color: #c41e3a; font-weight: bold; margin-bottom: 15px; }
+    .option-desc { color: #aaa; font-size: 15px; margin-bottom: 10px; }
+    .option-tag { display: inline-block; background: rgba(196,30,58,0.2); color: #e94560; padding: 4px 12px; border-radius: 20px; font-size: 12px; }
+    
+    /* Specs */
+    .specs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; max-width: 900px; margin: 0 auto; }
+    .spec-item { background: rgba(255,255,255,0.05); padding: 20px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; }
+    .spec-item span { color: #888; }
+    .spec-item strong { color: #c41e3a; font-size: 18px; }
     footer { padding: 40px 20px; text-align: center; color: #666; border-top: 1px solid rgba(255,255,255,0.1); }
   </style>
 </head>
@@ -144,6 +160,33 @@
       </div>
     </div>
     <p class="problem-text">Parks and public spaces are constantly littered. Traditional cleanup requires armies of workers, expensive equipment, and still misses things. Garbot solves this with autonomous robots that work around the clock.</p>
+  </div>
+  
+  <div class="section" style="background: rgba(0,0,0,0.2);">
+    <h2>Dumb <span class="highlight">Robot</span>, Smart <span class="highlight">Cloud</span></h2>
+    <p class="section-intro">The secret to Garbot: the robot is simple and inexpensive. All the intelligence lives in the cloud.</p>
+    <div class="grid">
+      <div class="card">
+        <div class="card-icon">🧠</div>
+        <h3>Cloud AI</h3>
+        <p>Computer vision and LLMs run in the cloud. Garbot just follows instructions.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">💰</div>
+        <h3>Low Cost</h3>
+        <p>If destroyed or stolen, it's not a disaster. Cheap to replace, expensive to hack.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🎮</div>
+        <h3>Remote Control</h3>
+        <p>When stuck, operators can take manual control for recovery.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🛑</div>
+        <h3>Smart Stop</h3>
+        <p>Encounters an obstruction? Stops and waits. AI decides when to proceed.</p>
+      </div>
+    </div>
   </div>
   
   <div class="section">
@@ -226,6 +269,73 @@
         <h3>LTE Connected</h3>
         <p>Always online. Streams data to cloud. Receives commands in real-time.</p>
       </div>
+    </div>
+  </div>
+  
+  <div class="section" id="options">
+    <h2>Battery <span class="highlight">Options</span></h2>
+    <p class="section-intro">Choose the right power configuration for your deployment.</p>
+    <div class="options-grid">
+      <div class="option-card featured">
+        <div class="option-name">Standard</div>
+        <div class="option-price">Included</div>
+        <div class="option-desc">Li-ion battery optimized for daytime operation.</div>
+        <span class="option-tag">Best for: Parks with good sun</span>
+      </div>
+      <div class="option-card">
+        <div class="option-name">Extended</div>
+        <div class="option-price">+$500</div>
+        <div class="option-desc">Larger Li-ion pack for longer runtime.</div>
+        <span class="option-tag">Best for: All-day coverage</span>
+      </div>
+      <div class="option-card">
+        <div class="option-name">All-Season</div>
+        <div class="option-price">+$800</div>
+        <div class="option-desc">LiFePO4 chemistry for cold Canadian winters.</div>
+        <span class="option-tag">Best for: Year-round operation</span>
+      </div>
+      <div class="option-card">
+        <div class="option-name">Night</div>
+        <div class="option-price">+$1,200</div>
+        <div class="option-desc">Larger battery, LED lights, no solar panel.</div>
+        <span class="option-tag">Best for: 24-hour coverage</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section" style="background: rgba(0,0,0,0.2);">
+    <h2>Arm <span class="highlight">Options</span></h2>
+    <p class="section-intro">Different pickup capabilities at different price points.</p>
+    <div class="options-grid">
+      <div class="option-card">
+        <div class="option-name">Basic</div>
+        <div class="option-price">Included</div>
+        <div class="option-desc">2-DOF gripper. Picks up bottles and cans.</div>
+      </div>
+      <div class="option-card featured">
+        <div class="option-name">Standard</div>
+        <div class="option-price">+$300</div>
+        <div class="option-desc">3-DOF arm with 2kg lift. Extended reach for bags.</div>
+      </div>
+      <div class="option-card">
+        <div class="option-name">Premium</div>
+        <div class="option-price">+$800</div>
+        <div class="option-desc">6-DOF full articulation. Picks up almost anything.</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section" id="specs">
+    <h2>Technical <span class="highlight">Specs</span></h2>
+    <div class="specs-grid">
+      <div class="spec-item"><span>Solar Panel</span><strong>700W</strong></div>
+      <div class="spec-item"><span>Speed</span><strong>10 km/h</strong></div>
+      <div class="spec-item"><span>Form Factor</span><strong>~2.4m × 1.3m</strong></div>
+      <div class="spec-item"><span>Connectivity</span><strong>LTE</strong></div>
+      <div class="spec-item"><span>AI Compute</span><strong>Jetson Nano</strong></div>
+      <div class="spec-item"><span>Obstacles</span><strong>Stop & wait</strong></div>
+      <div class="spec-item"><span>Drive</span><strong>4-wheel off-road</strong></div>
+      <div class="spec-item"><span>Navigation</span><strong>GPS waypoints</strong></div>
     </div>
   </div>
   
