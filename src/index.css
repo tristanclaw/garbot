@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #1a1a2e;
+  --secondary: #16213e;
+  --accent: #c41e3a;
+  --accent-light: #e94560;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: #0f0f1a;
+  color: #ffffff;
+}
+
+/* Gradient backgrounds */
+.hero-gradient {
+  background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 50%, #16213e 100%);
+}
+
+.card-gradient {
+  background: linear-gradient(180deg, rgba(26, 26, 46, 0.8) 0%, rgba(15, 15, 26, 0.9) 100%);
+}
+
+/* Animated gradient border */
+.gradient-border {
+  position: relative;
+  background: linear-gradient(135deg, #c41e3a, #e94560);
+  padding: 2px;
+  border-radius: 1rem;
+}
+
+.gradient-border-inner {
+  background: #0f0f1a;
+  border-radius: calc(1rem - 2px);
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Glow effects */
+.glow-red {
+  box-shadow: 0 0 30px rgba(196, 30, 58, 0.3);
+}
+
+.glow-blue {
+  box-shadow: 0 0 30px rgba(22, 33, 62, 0.5);
+}
+
+/* Scanline effect */
+.scanlines::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.1) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+}
