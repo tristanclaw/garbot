@@ -66,6 +66,34 @@
     .card-icon { font-size: 48px; margin-bottom: 15px; }
     .card h3 { font-size: 22px; margin-bottom: 10px; }
     .card p { color: #888; font-size: 16px; margin: 0; }
+    
+    /* Problem Section */
+    .problem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 40px; }
+    .problem-card { background: rgba(255,255,255,0.05); padding: 30px; border-radius: 16px; text-align: center; border: 1px solid rgba(196,30,58,0.3); }
+    .problem-stat { font-size: 48px; font-weight: bold; color: #c41e3a; margin-bottom: 10px; }
+    .problem-text { font-size: 20px; color: #aaa; max-width: 800px; margin: 0 auto; text-align: center; line-height: 1.6; }
+    
+    /* Steps */
+    .steps { display: flex; flex-direction: column; gap: 30px; max-width: 800px; margin: 0 auto; }
+    .step { display: flex; gap: 20px; align-items: flex-start; }
+    .step-number { 
+      width: 60px; height: 60px; background: #c41e3a; border-radius: 50%; 
+      display: flex; align-items: center; justify-content: center; 
+      font-size: 28px; font-weight: bold; flex-shrink: 0; 
+    }
+    .step-content h3 { font-size: 24px; margin-bottom: 10px; }
+    .step-content p { color: #888; font-size: 16px; line-height: 1.6; }
+    
+    /* Images */
+    .image-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .image-placeholder { 
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); 
+      border: 2px dashed #333; border-radius: 16px; padding: 60px 20px; 
+      text-align: center; 
+    }
+    .placeholder-icon { font-size: 64px; margin-bottom: 15px; }
+    .image-placeholder p { color: #666; font-size: 16px; }
+    .image-caption { text-align: center; color: #555; font-size: 14px; margin-top: 20px; font-style: italic; }
     footer { padding: 40px 20px; text-align: center; color: #666; border-top: 1px solid rgba(255,255,255,0.1); }
   </style>
 </head>
@@ -96,7 +124,77 @@
   </div>
   
   <div class="section">
-    <h2>Built for <span class="highlight">Autonomy</span></h2>
+    <h2>The <span class="highlight">Problem</span></h2>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="problem-stat">12B</div>
+        <p>Pieces of litter in Canadian parks annually</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-stat">$500M+</div>
+        <p>Spent on park cleanup every year</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-stat">40%</div>
+        <p>Of cleanup budget is manual labor</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-stat">∞</div>
+        <p>Potential for 24/7 autonomous coverage</p>
+      </div>
+    </div>
+    <p class="problem-text">Parks and public spaces are constantly littered. Traditional cleanup requires armies of workers, expensive equipment, and still misses things. Garbot solves this with autonomous robots that work around the clock.</p>
+  </div>
+  
+  <div class="section">
+    <h2>How It <span class="highlight">Works</span></h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>Solar Charging</h3>
+          <p>700W solar panel charges the battery during the day. Garbot runs entirely on solar power - no grid connection needed.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>AI Patrols</h3>
+          <p>Autonomous navigation with GPS waypoints. Computer vision detects garbage in real-time. AI decides what to pick up.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3>Collects Garbage</h3>
+          <p>Robotic arm picks up detected items. Bin stores until full. Cloud manages fleet and alerts when service needed.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section" id="images">
+    <h2>Garbot in <span class="highlight">Action</span></h2>
+    <div class="image-grid">
+      <div class="image-placeholder">
+        <div class="placeholder-icon">🤖</div>
+        <p>Autonomous patrol through park pathways</p>
+      </div>
+      <div class="image-placeholder">
+        <div class="placeholder-icon">👀</div>
+        <p>AI detects and identifies garbage</p>
+      </div>
+      <div class="image-placeholder">
+        <div class="placeholder-icon">🦾</div>
+        <p>Robotic arm picks up detected items</p>
+      </div>
+      <div class="image-placeholder">
+        <div class="placeholder-icon">☁️</div>
+        <p>Cloud fleet management dashboard</p>
+      </div>
+    </div>
+    <p class="image-caption">*Concept imagery. Actual product coming 2026.</p>
+  </div>
     <div class="grid">
       <div class="card">
         <div class="card-icon">☀️</div>
